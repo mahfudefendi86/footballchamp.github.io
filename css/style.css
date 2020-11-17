@@ -1,0 +1,151 @@
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/css/font/material-icons.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.material-icons-36{
+    font-size: 34px!important;
+    vertical-align: middle;
+}
+
+a.waves-effect{
+    font-weight: 400!important;
+    color: #dadada!important;
+}
+
+a.waves-effect:hover{
+    background: #1a1b21!important;
+}
+
+a.waves-effect .material-icons {
+    margin: 0px 15px 0px 0px!important;
+    color: #dadada!important;
+}
+
+.fit-content {
+	height: fit-content !important;
+    padding: 0px!important;
+    object-fit: cover;
+}
+
+header,main, footer{
+    padding-left: 300px!important;
+}
+
+#main-content{
+    padding: 10px!important;
+}
+
+p{
+    margin-bottom: 10px!important;
+    text-indent: 50px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 97%;
+}
+
+.card-content{
+    padding: 0px!important;
+}
+.text-center{
+    text-align: center!important;
+    margin: auto;
+}
+.px-1{
+    padding-left: 1rem  !important;
+	padding-right: 1rem  !important;
+}
+.px-3{
+    padding-left: 2.5rem !important;
+	padding-right: 2.5rem !important;
+}
+.py-2{
+    padding-top: 1.5rem !important;
+	padding-bottom: 1.5rem !important;
+}
+.py-3{
+    padding-top: 2.5rem !important;
+	padding-bottom: 2.5rem !important;
+}
+
+.logo-team{
+    width: 60px!important;
+}
+.title-team{
+    text-align: left!important;
+}
+div.responsive-table{
+    overflow-x: auto;
+}
+
+.status{
+    color:#FFFFFF; padding:3px 6px; font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.bg_finish{
+    background: #079400;
+}
+
+.bg_inplay{
+    background: #946200;
+}
+
+.bg_scheduled{
+    background: #393630;
+}
+
+
+@media only screen and (max-width: 992px) {
+    header,main, footer{
+        padding: 0px!important;
+    }
+    #main-content{
+        padding: 10px!important;
+    }
+    .container {
+      width: 98%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    header,main, footer{
+        padding: 0px!important;
+    }
+    #main-content{
+        padding: 10px!important;
+    }
+    .container {
+      width: 98%;
+    }
+}
