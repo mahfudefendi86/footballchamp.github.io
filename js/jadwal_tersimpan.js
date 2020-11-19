@@ -20,26 +20,31 @@ const deletJadwalTersimpan = () => {
                daftarJadwalTersimpan(data);
            	})
 		}
-        
+
     });
 }
 
 const daftarJadwalTersimpan = (data) => {
 	var tableData = '';
-	data.forEach((data)=> {
-		tableData += `
-			<tr>
-                <td><img src="${data.teamIcon}"  class="logo-team" alt="logo team ${data.teamName}" /></td>
-				<td>${data.teamName}</td>
-				<td>
-					<a data-id="${data.teamId}" class="waves-effect waves-light btn-small lihat-jadwal-tersimpan"><i class="material-icons left">done</i> Lihat</a>
-				</td>
-				<td>
-					<a data-id="${data.teamId}" class="waves-effect waves-light red accent-4 btn-small hapus-jadwal-tersimpan"><i class="material-icons left">cancel</i> Hapus</a>
-				</td>
-			</tr>
-		`;
-	});
+    if(data.length > 0){
+        data.forEach((data)=> {
+    		tableData += `
+    			<tr>
+                    <td><img src="${data.teamIcon}"  class="logo-team" alt="logo team ${data.teamName}" /></td>
+    				<td>${data.teamName}</td>
+    				<td>
+    					<a data-id="${data.teamId}" class="waves-effect waves-light btn-small lihat-jadwal-tersimpan"><i class="material-icons left">done</i> Lihat</a>
+    				</td>
+    				<td>
+    					<a data-id="${data.teamId}" class="waves-effect waves-light red accent-4 btn-small hapus-jadwal-tersimpan"><i class="material-icons left">cancel</i> Hapus</a>
+    				</td>
+    			</tr>
+    		`;
+    	});
+    }else{
+        tableData +='<tr><td colspan="4"><div class="py-2 blue-grey darken-1"><h4 class="white-text">Belum ada ada jadwal yang tersimpan!</h3></div></td></tr>';
+    }
+
 	var htmlElement = `
 		<table class="striped highlight centered responsive-table">
 			<thead>
@@ -53,6 +58,7 @@ const daftarJadwalTersimpan = (data) => {
 			<tbody>${tableData}</tbody>
 		</table>
 	`;
+
     var elementContainer= document.getElementById('daftar-jadwal-tersimpan');
     document.getElementById('backToJadwalTersimpan').classList.add('hide');
     if(elementContainer!==null){

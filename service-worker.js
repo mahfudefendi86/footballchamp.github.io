@@ -82,10 +82,17 @@ if(workbox){
     );
 
     workbox.routing.registerRoute(
-    new RegExp('/pages/'),
-      workbox.strategies.staleWhileRevalidate({
-          cacheName: 'pages'
-      })
+        new RegExp('/pages/'),
+          workbox.strategies.staleWhileRevalidate({
+              cacheName: 'pages'
+        })
+    );
+
+    workbox.routing.registerRoute(
+        new RegExp('https://api.football-data.org/v2/'),
+        workbox.strategies.staleWhileRevalidate({
+          cacheName: 'API'
+        })
     );
 
 }else{
